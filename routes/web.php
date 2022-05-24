@@ -16,3 +16,19 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->get('/saludo', function () {
+    echo "Uruas";
+});
+
+$router->POST('/saludo', function () {
+    echo "urias";
+});
+
+$router->PUT('/saludo', function () {
+    echo "jesus";
+});
+
+$router->DELETE('/saludo', function () {
+    echo "JESUS";
+});
