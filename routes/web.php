@@ -17,8 +17,18 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-$router->get('/saludo', function () {
-    echo "Uruas";
+$router->get('/saludo/{nombre}', function ($nombre) {
+    echo "asdf, "." ".$nombre;
+});
+
+$router->get('/edad/{edad}', function ($edad) {
+    if($edad > 0 && $edad < 18){
+        echo "No se puede";
+    } else if($edad >= 18 && $edad <= 100){
+        echo "Si se puede";
+    } else{
+        echo "asu";
+    } 
 });
 
 $router->POST('/saludo', function () {
